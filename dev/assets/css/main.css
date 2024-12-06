@@ -14,7 +14,22 @@ body {
 }
 
 header nav {
-  height: 60px;
+  position: relative;
+  height: 65px;
+  backdrop-filter: blur(10px);
+}
+header nav::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 1px;
+  top: auto;
+  left: 20px;
+  bottom: 0;
+  background-color: rgba(228, 203, 203, 0.4);
 }
 header nav .gnb-list {
   display: flex;
